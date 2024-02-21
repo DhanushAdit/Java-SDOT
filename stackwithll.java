@@ -1,6 +1,8 @@
 import java.util.*;
-public class stackwithll {
-    public static void main(String[] args){
+public class stackwithll 
+{
+    public static void main(String[] args)
+    {
         Scanner sc = new Scanner(System.in);
         LinkedList ll = new LinkedList();
         int n = sc.nextInt();
@@ -9,8 +11,14 @@ public class stackwithll {
             ll.insertAtEnd(sc.nextInt());
         }
         ll.print();
+        ll.pop();
+        ll.print();
+        ll.pop();
+        ll.print();
+        sc.close();
     }
-    static class LinkedList{
+    static class LinkedList
+    {
         Node head = null;
         Node tail = null;
         void insertAtEnd(int data)
@@ -35,18 +43,25 @@ public class stackwithll {
                 System.out.print(temp.data);
                 temp = temp.next;
             }
+            System.out.println();
         }
         void pop()
         {
-            for(int i=0;i<;i++)
+            Node temp = head;
+            while(temp.next.next!=null)
             {
-
+                temp = temp.next;
             }
+            int rem = tail.data;
+            System.out.println("The data to be removed is:"+rem);
+            temp.next = null;
+            tail = temp;
         }
 
     }
 
-    static class Node{
+    static class Node
+    {
         int data;
         Node next = null;
         Node(int data)
