@@ -1,3 +1,5 @@
+//this is the program to implement stack in form of an array
+
 import java.util.*;
 public class stackwitharray {
     public static void main(String[] args){
