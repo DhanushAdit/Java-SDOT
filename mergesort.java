@@ -1,3 +1,5 @@
+//this program is to merge some sorted linked list
+
 import java.util.*;
 
 class summa{
