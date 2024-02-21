@@ -1,3 +1,5 @@
+//implementing stack with custom LinkedList class
+
 import java.util.*;
 public class stackwithll 
 {
