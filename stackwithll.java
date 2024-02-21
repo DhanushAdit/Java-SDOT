@@ -1,5 +1,3 @@
-//implementing stack with custom LinkedList class
-
 import java.util.*;
 public class stackwithll 
 {
@@ -10,13 +8,20 @@ public class stackwithll
         int n = sc.nextInt();
         for(int i=0;i<n;i++)
         {
-            ll.insertAtEnd(sc.nextInt());
+            String ip = sc.next();
+            if(ip.equals("push"))
+            {
+                ll.insertAtEnd(sc.nextInt());
+            }
+            if(ip.equals("pop"))
+            {
+                ll.pop();
+            }
+            if(ip.equals("print"))
+            {
+                ll.print();
+            }
         }
-        ll.print();
-        ll.pop();
-        ll.print();
-        ll.pop();
-        ll.print();
         sc.close();
     }
     static class LinkedList
@@ -49,6 +54,10 @@ public class stackwithll
         }
         void pop()
         {
+            if(head==null)
+            {
+                System.out.print("Empty stack");
+            }
             Node temp = head;
             while(temp.next.next!=null)
             {
