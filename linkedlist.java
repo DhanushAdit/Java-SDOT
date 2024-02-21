@@ -1,3 +1,5 @@
+//this program is to create a samplle custom LinkedList class
+
 import java.util.*;
 public class linkedlist{
     public static void main(String[] args){
