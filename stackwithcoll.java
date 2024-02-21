@@ -1,3 +1,5 @@
+//implementing stack with default LinkedList collection
+
 import java.util.*;
 
 public class stackwithcoll {
