@@ -1,3 +1,5 @@
+//this program is to merge n number of linkedlist of different sizes to a single list
+//using seperate custom LinkedList class
 import java.util.*;
 
 class ListNode {
