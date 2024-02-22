@@ -13,6 +13,29 @@ class Main
             System.out.print(root.data+" ");
             inorder(root.right);
         }
+    static void postorder(Node root)
+        {
+            if(root == null)
+            {
+                return;
+            }
+            postorder(root.left);
+            postorder(root.right);
+            System.out.print(root.data+" ");
+            
+        }
+    static void preorder(Node root)
+        {
+            if(root == null)
+            {
+                return;
+            }
+            System.out.print(root.data+" ");
+            preorder(root.left);
+            preorder(root.right);
+            
+            
+        }
     static class Node
         {
             int data;
@@ -48,6 +71,10 @@ class Main
             
         }
         inorder(root);
+        System.out.println();
+        postorder(root);
+        System.out.println();
+        preorder(root);
     }
 }
 //preorder, postorder, Inorder 3 ways of printing a binary tree
