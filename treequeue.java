@@ -1,7 +1,7 @@
 //this code takes the a string of inputs for a tree and we assign it according to the diagram
 //this code will also print the tree in Inorder, Postorder and Pre-order
 //this code also contains a function to print the all the right voew elements of the tree
-
+// here we take -1 as the input end
 import java.util.*;
 class Main
 {
@@ -78,7 +78,7 @@ class Main
                 curr.left = new Node(Integer.parseInt(strip[i]));
                 queue.add(curr.left);
             }
-            if(!strip[i+1].equals("-1")) //when the value is not equal to -1 add the value as child
+            if(i+1<strip.size() && !strip[i+1].equals("-1")) //when the value is not equal to -1 add the value as child
             {
                 curr.right = new Node(Integer.parseInt(strip[i+1]));
                 queue.add(curr.right);
