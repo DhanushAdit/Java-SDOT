@@ -1,6 +1,6 @@
 //this code takes the a string of inputs for a tree and we assign it according to the diagram
-//and printing the binary tree in all three forms
-//preorder, postorder, and inorder
+//this code will also print the tree in Inorder, Postorder and Pre-order
+//this code also contains a function to print the all the right voew elements of the tree
 
 import java.util.*;
 class Main
@@ -38,6 +38,19 @@ class Main
             
             
         }
+    static void findRightView(Node root,int depth,List <Integer> rightView)
+    {
+        if(root == null)
+        {
+            return;
+        }
+        if(depth == rightView.size())
+        {
+            rightView.add(root.data);
+        }
+        findRightView(root.right,depth+1,rightView);
+        findRightView(root.left,depth+1,rightView);
+    }
     static class Node
         {
             int data;
@@ -77,6 +90,10 @@ class Main
         postorder(root);
         System.out.println();
         preorder(root);
+        List<Integer> rightView = new ArrayList<>();
+        findRightView(root,0,rightView);
+        System.out.println();
+        System.out.print(rightView);
     }
 }
 //preorder, postorder, Inorder 3 ways of printing a binary tree
