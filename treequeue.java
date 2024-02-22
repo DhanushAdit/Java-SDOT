@@ -1,4 +1,6 @@
 //this code takes the a string of inputs for a tree and we assign it according to the diagram
+//and printing the binary tree in all three forms
+//preorder, postorder, and inorder
 
 import java.util.*;
 class Main
